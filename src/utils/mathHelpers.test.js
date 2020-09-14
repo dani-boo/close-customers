@@ -6,7 +6,7 @@ describe('degToRad()', () => {
   })
 })
 
-describe('isDistanceInsideRadius()', () => {
+describe('getDistance()', () => {
   it('should return true if the great-circle distance between two points <= distance', () => {
     const close = {
       latOne: 53.74452,
@@ -14,7 +14,7 @@ describe('isDistanceInsideRadius()', () => {
       longOne: -7.11167,
       longTwo: -7.2875
     }
-    expect(mathHelpers.isDistanceInsideRadius(close.latOne, close.longOne, close.latTwo, close.longTwo, 100)).toBe(true);
+    expect(mathHelpers.getDistance(close.latOne, close.longOne, close.latTwo, close.longTwo)).toStrictEqual(11.711308403357469);
   })
   it('should return false otherwise', () => {
     const far = {
@@ -23,6 +23,6 @@ describe('isDistanceInsideRadius()', () => {
       longOne: -8.522366,
       longTwo: -6.361944
     }
-    expect(mathHelpers.isDistanceInsideRadius(far.latOne, far.longOne, far.latTwo, far.longTwo, 80)).toBe(false);
+    expect(mathHelpers.getDistance(far.latOne, far.longOne, far.latTwo, far.longTwo)).toStrictEqual(199.20172129454426);
   })
 })

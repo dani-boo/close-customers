@@ -15,16 +15,15 @@ const degToRad = (degrees) => {
  * @param {number} longOne first location's longitude
  * @param {number} latTwo second location's latitude
  * @param {number} longTwo second location's longitude
- * @param {number} distance
- * @returns {boolean} true if <= distance
+ * @returns {number} distance between two points
  */
-const isDistanceInsideRadius = (latOne, longOne, latTwo, longTwo, distance) => {
+const getDistance = (latOne, longOne, latTwo, longTwo, distance) => {
   const lonDiff = Math.abs(degToRad(longOne) - degToRad(longTwo));
   const diff =
     Math.sin(degToRad(latOne)) * Math.sin(degToRad(latTwo)) +
     Math.cos(degToRad(latOne)) * Math.cos(degToRad(latTwo)) * Math.cos(lonDiff);
-  return (Math.acos(diff) * EARTH_RADIUS) <= distance;
+  return (Math.acos(diff) * EARTH_RADIUS);
 };
 
 exports.degToRad = degToRad;
-exports.isDistanceInsideRadius = isDistanceInsideRadius;
+exports.getDistance = getDistance;
