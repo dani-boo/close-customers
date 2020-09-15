@@ -21,7 +21,7 @@ beforeEach(() => {
 
 describe('writeFile', () => {
   it('should log a success message', () => {
-    writeFile('read', 'write', 'stringData');
+    writeFile('write', 'stringData');
     expect(console.log).toHaveBeenCalled();
   })
   it('should log an error to the console and throw if it fails', () => { 

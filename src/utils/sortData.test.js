@@ -20,6 +20,6 @@ describe('sortData()', () => {
   })
   it('should not sort if the user_id\'s are the same', () => {
     const doNotSort = sortData(doubledValues)
-    expect(doNotSort).toBe(doubledValues)
+    expect(doNotSort).toStrictEqual(doubledValues)
   })
 })
