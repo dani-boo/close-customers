@@ -12,8 +12,8 @@ A barely-there, reusable program written in [Node.js](https://nodejs.org/en/docs
 - returns a new simplified _**output.txt**_ file of "close customers", sorted by _**user_id**_.
 
 ## HOW TO USE?
-📌 In your teminal, run `git clone https://github.com/dani-boo/intercom-tech-test.git`  
-📌 Go to directory by running `cd intercom-tech-test`  
+📌 In your teminal, run `git clone https://github.com/dani-boo/close-customers.git`  
+📌 Go to directory by running `cd close-customers`  
 📌 Run `yarn` to install dependencies
 
 🚨**NB: You need `node` to run this project, which you can download from [here](https://nodejs.org/en/). If you don't know whether node is installed on your machine you can check with the command `node -v`, which will print your current node version to the console.**
