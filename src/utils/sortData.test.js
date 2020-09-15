@@ -15,11 +15,11 @@ const doubledValues = [
 describe('sortData()', () => {
   it('should sort an array by user_id', () => {
     const sorted = sortData(customerArr)
-    expect(sorted[0].user_id).toBe(1)
-    expect(sorted[3].user_id).toBe(4)
-  })
+    expect(sorted[0].user_id).toBe(1);
+    expect(sorted[3].user_id).toBe(4);
+  });
   it('should not sort if the user_id\'s are the same', () => {
-    const doNotSort = sortData(doubledValues)
-    expect(doNotSort).toStrictEqual(doubledValues)
-  })
+    const doNotSort = sortData(doubledValues);
+    expect(doNotSort).toStrictEqual(doubledValues);
+  });
 })

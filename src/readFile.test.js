@@ -18,20 +18,20 @@ describe('readCustomerData', () => {
     fs.readFileSync.mockReturnValue(testData);
     readFile('fakeFilePath');
     expect(fs.readFileSync).toHaveBeenCalledWith('fakeFilePath', 'utf8'); 
-  })
+  });
   it('should return data as a JSON array', () => {
     const parsedData = readFile(testData)
     expect(parsedData).toStrictEqual(dataAsJSON)
-  })
+  });
 
   it('should return an empty array if path or data do not exist', () => {
     fs.readFileSync.mockReturnValue('')
     expect(readFile('non-existent-path')).toStrictEqual([])
-  })
+  });
 
   it('should return an empty array if called with incorrect data types', () => {
     const dataIsNotAString = {badData: 'bad data'}
     fs.readFileSync.mockReturnValue({badData: 'bad data'})
     expect(readFile(dataIsNotAString)).toStrictEqual([])
-  })
-})
+  });
+});

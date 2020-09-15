@@ -16,6 +16,6 @@ const formatted = [
 
 describe('formatData()', () => {
   it('should return an array of objects of only user_id\'s and names', () => {
-    expect(formatData(customerArray)).toStrictEqual(formatted)
-  })
-})
+    expect(formatData(customerArray)).toStrictEqual(formatted);
+  });
+});

@@ -1,5 +1,5 @@
-const isWithinRadius = require('./isWithinRadius')
-const mathHelpers = require('./mathHelpers')
+const isWithinRadius = require('./isWithinRadius');
+const mathHelpers = require('./mathHelpers');
 
 jest.mock('./mathHelpers', () => ({
   getDistance: jest.fn(),
@@ -17,19 +17,19 @@ describe('isWithinRadius()', () => {
 
   it('should return false if the distance from the office is greater than the specified distance', () => {
     mathHelpers.getDistance.mockReturnValue(21);
-    expect(isWithinRadius(officeData, 20)(customerData)).toBe(false)
-  })
+    expect(isWithinRadius(officeData, 20)(customerData)).toBe(false);
+  });
 
   it('should return true if the distance from the office is less than or equal to the specified distance', () => {
     mathHelpers.getDistance.mockReturnValue(19);
-    expect(isWithinRadius(officeData, 20)(customerData)).toBe(true)
-  })
+    expect(isWithinRadius(officeData, 20)(customerData)).toBe(true);
+  });
 
   it('can be used to filter an array', () => {
     mathHelpers.getDistance.mockReturnValueOnce(19);
-    expect([customerData].filter(isWithinRadius(officeData, 20))).toStrictEqual([customerData])
+    expect([customerData].filter(isWithinRadius(officeData, 20))).toStrictEqual([customerData]);
     
     mathHelpers.getDistance.mockReturnValueOnce(21);
-    expect([customerData].filter(isWithinRadius(officeData, 20))).toStrictEqual([])
-  })
-})
+    expect([customerData].filter(isWithinRadius(officeData, 20))).toStrictEqual([]);
+  });
+});

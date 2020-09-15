@@ -23,14 +23,18 @@ describe('writeFile', () => {
   it('should log a success message', () => {
     writeFile('write', 'stringData');
     expect(console.log).toHaveBeenCalled();
+  });
+  it('should call fs.writeFileSync', () => {
+    writeFile('write', 'stringData');
+    expect(fs.writeFileSync).toHaveBeenCalled();
   })
   it('should log an error to the console and throw if it fails', () => { 
     fs.writeFileSync.mockImplementation(() => {
       throw new Error();
-    })
+    });
     expect(() => {
       writeFile()
     }).toThrow();
     expect(console.warn).toHaveBeenCalled();
-  })
+  });
 });

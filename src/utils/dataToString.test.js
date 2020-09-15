@@ -16,5 +16,5 @@ describe('dataToString()', () => {
   it('should map through an array and return a string in the correct format', () => {
     const formatted = dataToString(inputData);
     expect(formatted).toStrictEqual(expected);
-  })
-})
+  });
+});

@@ -4,5 +4,5 @@ module.exports = (customerArr) => {
       id: customer.user_id,
       name: customer.name
     }
-  })
+  });
 }
