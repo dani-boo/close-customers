@@ -18,11 +18,11 @@ A barely-there, reusable program written in [Node.js](https://nodejs.org/en/docs
 
 🚨**NB: You need `node` to run this project, which you can download from [here](https://nodejs.org/en/). If you don't know whether node is installed on your machine you can check with the command `node -v`, which will print your current node version to the console.**
 
-**🌡️TESTING:**  
+**🌡️ TESTING:**  
 Run tests with `yarn test`. See coverage report by running `yarn test --coverage`  
 ![test coverage](public/testCoverage.png)
   
-**💻RUN PROGRAM:**  
+**💻 RUN PROGRAM:**  
 Write/overwrite the `output.txt` file (in repo's _**public**_ folder) by going to src folder (`cd src`) and running _**writeFile**_ function inside index.js:  
 `node index.js`  
 (this also logs the result to the console) 
