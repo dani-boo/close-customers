@@ -32,7 +32,8 @@ Write/overwrite the `output.txt` file (in repo's _**public**_ folder) by going t
 
 ## Sample filtered and sorted data (customers who are close enough):
 
-```{"id": "4", "name": "Ian Kehoe"}
+```
+{"id": "4", "name": "Ian Kehoe"}
 {"id": "5", "name": "Nora Dempsey"}
 {"id": "6", "name": "Theresa Enright"}
 {"id": "8", "name": "Eoin Ahearn"}
