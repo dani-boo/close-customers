@@ -1,8 +1,8 @@
 <!--- to preview in VSCode, use ⇧⌘V (shift + command + V) --->
 
-# 🎙️ INTERCOM TECH TEST
+
 📍🗺️📍🗺️📍🗺️📍🗺️📍🗺️📍
-## "CLOSE CUSTOMERS"
+### "CLOSE CUSTOMERS" TECH TEST
 🗺️📍🗺️📍🗺️📍🗺️📍🗺️📍🗺️
 
 A barely-there, reusable program written in [Node.js](https://nodejs.org/en/docs) that:
@@ -11,7 +11,7 @@ A barely-there, reusable program written in [Node.js](https://nodejs.org/en/docs
 - finds customers within a defined radius using the [great-circle distance formula](https://en.wikipedia.org/wiki/Great-circle_distance), and
 - returns a new simplified _**output.txt**_ file of "close customers", sorted by _**user_id**_.
 
-## HOW TO USE?
+### HOW TO USE?
 📌 In your teminal, run `git clone https://github.com/dani-boo/close-customers.git`  
 📌 Go to directory by running `cd close-customers`  
 📌 Run `yarn` to install dependencies
